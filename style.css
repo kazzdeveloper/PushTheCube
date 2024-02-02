@@ -1,0 +1,154 @@
+@font-face {
+    font-family: standFont;
+    src: url('Inlanders Demo.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: standFont;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#navBar {
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    z-index: 100;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+#navBar ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    margin: 0 1em;
+    width: 5em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+}
+#navBarLink:hover{
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+#bigPictureHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(55, 58, 50);
+}
+
+#bigPictureImg {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 0.5s ease-out;
+}
+#gameLogo {
+    position: absolute;
+    object-fit: cover;
+    width: 55%
+}
+#about {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 250, 205);
+}
+#discordServer{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items:end;
+    justify-content: center;
+    background-color: rgb(30,33,36);
+}
+#discordWidget{
+    width: 30em;
+    height: 30em;
+    margin-bottom: 5em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 26px -3px rgba(114,137,218,1);
+    transition: transform 0.1s ease-out;
+}
+#discordWidget:hover{
+    transform: scale(102%);
+}
+#discordText{
+    color: white;
+    justify-content: center;
+    display: flex;
+    font-size: 3em;
+    transition: transform 0.1s ease-out;
+}
+#discordText:hover{
+    transform: scale(105%);
+}
+#aboutItem {
+    flex: 1;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 2.5em;
+    color: rgb(58, 57, 57);
+    text-align: center;
+}
+#aboutItem:last-child {
+    text-align: right;
+}
+#devLogo{
+    width: 10em;
+    border-radius: 10em;
+    box-shadow: 0px 0px 67px -8px rgba(0, 17, 255, 0.75);
+    transition: 0.2s;
+}
+#devLogo:hover{
+    transform: scale(1.05) rotate(10deg);
+}
+@media (orientation: portrait) {
+    #gameLogo {
+        width: 100%;
+    }
+    #about{
+        display:grid;
+        grid-template-rows: 20em ;
+        align-items: center;
+        justify-content: center;
+    }
+    #devLogo{
+        width: 10em;
+        border-radius: 10em;
+        box-shadow: 0px 0px 67px -8px rgba(0, 17, 255, 0.75);
+        transition: 0.2s;
+    }
+    #aboutItem{
+        font-size: 1.5em;
+    }
+    #discordWidget{
+        width: 15em;
+        height: 20em;
+        margin-bottom: 5em;
+        border-radius: 1em;
+        box-shadow: 0px 0px 26px -3px rgba(114,137,218,1);
+        transition: transform 0.1s ease-out;
+    }
+}
